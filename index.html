@@ -1,98 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A curated storefront for everyday essentials." />
-    <title>Marketly | Everyday essentials</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#">marketly</a>
-      <nav aria-label="Main navigation">
-        <a href="#shop">Shop</a>
-        <a href="#categories">Categories</a>
-        <a href="#newsletter">Newsletter</a>
-      </nav>
-      <a class="cart-link" href="#cart" aria-label="Shopping cart, 0 items">Cart <span>0</span></a>
-    </header>
 
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A curated storefront for everyday essentials." />
+  <title>Marketly | Everyday essentials</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">marketly</a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+    <a class="cart-link" href="#cart" aria-label="Shopping cart, 0 items">Cart <span>0</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">New season, new finds</p>
+        <h1 id="hero-title">Everyday goods, thoughtfully chosen.</h1>
+        <p>Discover considered essentials made for your home, routine, and next adventure.</p>
+        <a class="button" href="#shop">Shop new arrivals</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="A collection of lifestyle products"></div>
+    </section>
+
+    <section class="section" id="categories" aria-labelledby="category-title">
+      <div class="section-heading">
         <div>
-          <p class="eyebrow">New season, new finds</p>
-          <h1 id="hero-title">Everyday goods, thoughtfully chosen.</h1>
-          <p>Discover considered essentials made for your home, routine, and next adventure.</p>
-          <a class="button" href="#shop">Shop new arrivals</a>
+          <p class="eyebrow">Browse by category</p>
+          <h2 id="category-title">Find your next favorite</h2>
         </div>
-        <div class="hero-image" role="img" aria-label="A collection of lifestyle products"></div>
-      </section>
+        <a href="#shop">View all</a>
+      </div>
+      <div class="category-grid">
+        <a class="category skincare" href="#shop" onclick="loadProducts('skincare')"><span>Skincare</span></a>
+        <a class="category apparel" href="#shop" onclick="loadProducts('apparel')"><span>Apparel</span></a>
+        <a class="category accessories" href="#shop" onclick="loadProducts('accessories')"><span>Accessories</span></a>
+        <div id="store-display">
+        </div>
+      </div>
+    </section>
 
-      <section class="section" id="categories" aria-labelledby="category-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Browse by category</p>
-            <h2 id="category-title">Find your next favorite</h2>
-          </div>
-          <a href="#shop">View all</a>
-        </div>
-        <div class="category-grid">
-          <a class="category home" href="#shop"><span>Home</span></a>
-          <a class="category apparel" href="#shop"><span>Apparel</span></a>
-          <a class="category accessories" href="#shop"><span>Accessories</span></a>
-        </div>
-      </section>
 
-      <section class="section" id="shop" aria-labelledby="product-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Popular now</p>
-            <h2 id="product-title">Featured products</h2>
-          </div>
-          <button class="filter-button" type="button">Filter</button>
-        </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image product-one" role="img" aria-label="Everyday Tote"></div>
-            <h3>Everyday Tote</h3>
-            <p class="price">$48.00</p>
-          </article>
-          <article class="product-card">
-            <div class="product-image product-two" role="img" aria-label="Stoneware Mug"></div>
-            <h3>Stoneware Mug</h3>
-            <p class="price">$24.00</p>
-          </article>
-          <article class="product-card">
-            <div class="product-image product-three" role="img" aria-label="Weekend Crewneck"></div>
-            <h3>Weekend Crewneck</h3>
-            <p class="price">$72.00</p>
-          </article>
-          <article class="product-card">
-            <div class="product-image product-four" role="img" aria-label="Leather Card Holder"></div>
-            <h3>Leather Card Holder</h3>
-            <p class="price">$36.00</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+    <section class="section" id="shop" aria-labelledby="product-title">
+      <div class="section-heading">
         <div>
-          <p class="eyebrow">Stay in the loop</p>
-          <h2 id="newsletter-title">Good things are on the way.</h2>
+          <p class="eyebrow">Popular now</p>
+          <h2 id="product-title">Featured products</h2>
         </div>
-        <form>
-          <label class="sr-only" for="email">Email address</label>
-          <input id="email" type="email" placeholder="Email address" />
-          <button class="button" type="submit">Subscribe</button>
-        </form>
-      </section>
-    </main>
+        <button class="filter-button" type="button">Filter</button>
+      </div>
+    </section>
 
-    <footer>
-      <a class="brand" href="#">marketly</a>
-      <p>© 2026 Marketly. Made for everyday living.</p>
-      <div><a href="https://www.instagram.com/">Instagram</a><a href="mailto:hello@marketly.example">Contact</a></div>
-    </footer>
-  </body>
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+      <div>
+        <p class="eyebrow">Stay in the loop</p>
+        <h2 id="newsletter-title">Good things are on the way.</h2>
+      </div>
+      <form>
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" type="email" placeholder="Email address" />
+        <button class="button" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#">marketly</a>
+    <p>© 2026 Marketly. Made for everyday living.</p>
+    <div><a href="https://www.instagram.com/">Instagram</a><a href="mailto:hello@marketly.example">Contact</a></div>
+  </footer>
+</body>
+
+<script>
+  // array of product objects
+  const allProducts = [
+    { name: "Running Sneakers", category: "apparel", price: "$60", image: "images/running-sneakers.jpg" },
+    { name: "Leather Boots", category: "apparel", price: "$120", image: "images/leather-boots.jpg" },
+    { name: "Baseball Cap", category: "accessories", price: "$20", image: "images/baseball-cap.jpg" },
+    { name: "Winter Beanie", category: "accessories", price: "$15", image: "images/winter-beanie.jpg" }
+  ];
+
+  // display/filter products function
+  function loadProducts(selectedCategory) {
+    // find html container
+    const displayArea = document.getElementById("store-display");
+
+    // clear out whatever is currently in the container
+    displayArea.innerHTML = "";
+
+    // loop through data array 
+    for (let i = 0; i < allProducts.length; i++) {
+      let product = allProducts[i];
+
+      // If the product matches the button the user clicked
+      if (product.category === selectedCategory) {
+
+        // build a new HTML string for that specific product
+        let productHTML = `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.name}" style="max-width: 100%; border-radius: 5px;">
+            <h3>${product.name}</h3>
+            <p>Price: ${product.price}</p>
+          </div>
+        `;
+
+        // place product in display area
+        displayArea.innerHTML += productHTML;
+      }
+    }
+  }
+</script>
+
 </html>
